@@ -15,14 +15,14 @@ model DHTSensorData {
 }
 
 model MPUSensorData {
-  id          Int     @id @default(autoincrement())
-  accelX      Float
-  accelY      Float
-  accelZ      Float
-  gyroX       Float
-  gyroY       Float
-  gyroZ       Float
-  timestamp   DateTime @default(now())
+  id        Int      @id @default(autoincrement())
+  accelX    Float
+  accelY    Float
+  accelZ    Float
+  gyroX     Float
+  gyroY     Float
+  gyroZ     Float
+  timestamp DateTime @default(now())
 }
 
 model PIRStatus {
@@ -34,17 +34,17 @@ model PIRStatus {
 }
 
 model RelayStatus {
-  id        Int     @id @default(1)
-  relay1    Boolean @default(false)
-  relay2    Boolean @default(false)
-  relay3    Boolean @default(false)
-  relay4    Boolean @default(false)
+  id     Int     @id @default(1)
+  relay1 Boolean @default(false)
+  relay2 Boolean @default(false)
+  relay3 Boolean @default(false)
+  relay4 Boolean @default(false)
 
   @@map("relay_status")
 }
 
 model MPU6050 {
-  id        String  @id @default(uuid())
+  id        String   @id @default(uuid())
   accX      Float
   accY      Float
   accZ      Float
@@ -52,7 +52,7 @@ model MPU6050 {
 }
 
 model Ultrasonic {
-  id       Int     @id @default(1)
-  distance Float
+  id        Int      @id @default(1)
+  distance  Float
   updatedAt DateTime @updatedAt
 }
